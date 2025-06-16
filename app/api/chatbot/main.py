@@ -5,7 +5,7 @@
 # import google.generativeai as genai
 #
 # # === CONFIG ===
-# API_KEY = "AIzaSyC30o6U8GkbXc7ajxkpMRj8A6ritQ1QynU"   # <-- Replace with yours
+   # <-- Replace with yours
 # MODEL_NAME = "gemini-1.5-flash"
 # JSONL_PATH = "prawin_dataset.jsonl"
 #

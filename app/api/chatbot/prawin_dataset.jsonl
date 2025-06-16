@@ -1,0 +1,110 @@
+{"instruction": "What is Prawin's current CGPA at SSN College?", "output": "Prawin maintains a CGPA of 8.719 in Computer Science Engineering at SSN College of Engineering."}
+{"instruction": "Where is Prawin pursuing his Data Science degree?", "output": "Prawin is pursuing a Bachelor of Science in Data Science at IIT Madras with a CGPA of 7.75."}
+{"instruction": "What was Prawin's XII board percentage?", "output": "Prawin scored 97.6% in CBSE XII exams at Smt. Ramkuwar Devi Fomra Vivekananda Vidyalaya."}
+{"instruction": "Is Prawin studying two degrees simultaneously?", "output": "Yes, Prawin is concurrently pursuing BE in CSE at SSN College and BS in Data Science at IIT Madras since August 2023."}
+{"instruction": "Describe SEGAT project", "output": "SEGAT (Feb 2025-Present) is an AI-powered tool that analyzes engineering graphics problems and generates 2D solutions in image/video formats. Prawin is developing it individually."}
+{"instruction": "What technologies power U R Hired?", "output": "U R Hired uses React.js (Vite) frontend, Flask-MongoDB backend, and AI for recruitment screening, interviews, and coding assessments."}
+{"instruction": "What is unique about ChessMate?", "output": "ChessMate (Sep-Nov 2024) is a Java-based chess platform with AI-powered ChessBot, puzzles, and game analysis. Prawin implemented core chess logic."}
+{"instruction": "How does the Traffic Light Optimization project work?", "output": "This AI system (Feb 2025-Present) dynamically adjusts traffic light timings using real-time data to reduce congestion at intersections."}
+{"instruction": "What does VoyageMind offer travelers?", "output": "VoyageMind (Mar 2025-Present) creates personalized travel itineraries based on user preferences, budgets, and destinations with AI-powered suggestions."}
+{"instruction": "List Prawin's frontend skills", "output": "Prawin's frontend skills include React.js, HTML, CSS, JavaScript, and Bootstrap."}
+{"instruction": "What Generative AI tools has Prawin used?", "output": "Prawin has experience with Hugging Face Transformers, LangChain, RAG, LLM, LoRA, QLoRA, and OpenAI API."}
+{"instruction": "Which databases is Prawin proficient in?", "output": "Prawin works with Oracle, MySQL, NoSQL, MongoDB, and Firebase Firestore."}
+{"instruction": "What programming languages does Prawin know?", "output": "Prawin codes in Python, Java, C, C++, and JavaScript."}
+{"instruction": "What developer tools has Prawin used?", "output": "Prawin uses Git, GitHub, Android Studio (Flutter), WebStorm, IntelliJ, Arduino, and sensors."}
+{"instruction": "What rank did Prawin achieve in IEEE Xtreme?", "output": "Prawin secured global rank 1254 and country rank 364 in IEEE Xtreme 18.0 coding competition."}
+{"instruction": "Describe Prawin's chess accomplishments", "output": "Prawin represented his college in chess tournaments and competed in state-level championships."}
+{"instruction": "What certification does Prawin have in Hindi?", "output": "Prawin holds a Hindi certification from Dakshin Bharat Hindi Prachar Sabha."}
+{"instruction": "What was Prawin's JEE Mains percentile?", "output": "Prawin cleared JEE Mains with 96 percentile."}
+{"instruction": "What did Prawin win the ACM contest for?", "output": "He won the ACM Turtle Graphics Coding Contest using Python's turtle module to replicate images."}
+{"instruction": "Is Prawin currently working on any funded projects?", "output": "Yes, his AI-Driven Traffic Light Optimization is an internally funded student project (Feb 2025-Present)."}
+{"instruction": "What projects involve AI?", "output": "All current projects use AI: SEGAT (GenAI), U R Hired (AI recruitment), Traffic Optimization (AI), and VoyageMind (AI travel planner)."}
+{"instruction": "Which project is targeted at engineering students?", "output": "SEGAT is designed to help first-year engineering students with graphics problem-solving."}
+{"instruction": "What was the duration of ChessMate development?", "output": "ChessMate was developed from September to November 2024."}
+{"instruction": "What backend framework does Prawin use for U R Hired?", "output": "U R Hired uses Flask for backend development."}
+{"instruction": "Which chess logic components did Prawin develop?", "output": "He implemented legal piece movements, checkmate, and stalemate identification for ChessMate."}
+{"instruction": "What hardware skills does Prawin have?", "output": "Prawin has experience with Arduino and various sensors."}
+{"instruction": "Does Prawin have mobile development skills?", "output": "Yes, he has used Flutter with Android Studio for mobile development."}
+{"instruction": "What is the end goal for SEGAT?", "output": "Prawin aims to transform SEGAT into a product benefiting first-year engineering students."}
+{"instruction": "How does U R Hired streamline recruitment?", "output": "It automates job screening, interview evaluations, and coding assessments using AI."}
+{"instruction": "What problem does Traffic Light Optimization solve?", "output": "It reduces congestion at busy intersections through real-time AI adjustments."}
+{"instruction": "Which projects are currently active?", "output": "Active projects: SEGAT, U R Hired, Traffic Optimization, and VoyageMind (all started between Feb-Mar 2025)."}
+{"instruction": "Compare Prawin's CGPAs", "output": "He maintains 8.719 in CSE at SSN and 7.75 in Data Science at IIT Madras."}
+{"instruction": "List projects using JavaScript ecosystem", "output": "U R Hired uses React.js (JavaScript) while ChessMate is transitioning to a full-stack web app."}
+{"instruction": "Where did Prawin use Flask?", "output": "Flask powers the backend of U R Hired recruitment platform."}
+{"instruction": "Which project uses MongoDB?", "output": "U R Hired employs MongoDB as its database solution."}
+{"instruction": "Has Prawin used Firebase?", "output": "Yes, he has experience with Firebase Firestore database."}
+{"instruction": "What Java projects has Prawin done?", "output": "ChessMate was built using Java as the primary language."}
+{"instruction": "How significant is Prawin's IEEE Xtreme rank?", "output": "His global rank of 1254 (top ~2.5%) among 10k+ teams demonstrates strong competitive coding skills."}
+{"instruction": "What does the Hindi certification imply?", "output": "It indicates multilingual proficiency from a recognized language institution."}
+{"instruction": "What was Prawin's school academic achievement?", "output": "He was school topper with 97.6% in XII board exams."}
+{"instruction": "How does VoyageMind personalize travel?", "output": "It analyzes user preferences, budgets, and destinations to generate custom itineraries with AI."}
+{"instruction": "What's innovative about SEGAT?", "output": "It automates engineering graphics solutions using Generative AI, outputting step-by-step 2D visuals."}
+{"instruction": "What makes U R Hired 'comprehensive'?", "output": "It handles end-to-end recruitment: from screening to technical assessments and interviews."}
+{"instruction": "What non-academic achievements does Prawin have?", "output": "He excels in chess (state-level player), competitive coding, and holds a Hindi certification."}
+{"instruction": "How does chess experience benefit Prawin technically?", "output": "It informed his development of chess logic algorithms for ChessMate project."}
+{"instruction": "Where is Prawin based?", "output": "Prawin is located in Chennai, India."}
+{"instruction": "What are Prawin's contact details?", "output": "Email: prawinkumar1506@gmail.com | Phone: +91 9486725000"}
+{"instruction": "Which projects are individual vs team?", "output": "SEGAT is individual; U R Hired, Traffic Optimization, and VoyageMind are team projects."}
+{"instruction": "What is the scale of U R Hired?", "output": "It's a full-stack platform with React.js frontend and Flask-MongoDB backend for enterprise-level recruitment."}
+{"instruction": "Where did Prawin apply GenAI skills?", "output": "He applied Generative AI in SEGAT for engineering graphics solutions."}
+{"instruction": "Which projects use both AI and web development?", "output": "U R Hired (AI recruitment) and VoyageMind (AI travel) combine React.js frontends with AI backends."}
+{"instruction": "What academic certifications does Prawin have?", "output": "He completed IITM Data Science Foundation Level and is pursuing Diploma Level."}
+{"instruction": "How many projects is Prawin currently handling?", "output": "He's actively developing 4 projects: SEGAT, U R Hired, Traffic Optimization, and VoyageMind."}
+{"instruction": "When did Prawin start his college education?", "output": "He began both BE CSE and BS Data Science in August 2023."}
+{"instruction": "Where did Prawin complete his Generative AI internship?", "output": "Prawin interned as a Generative AI Engineer at EinNel Technologies, working on multi-AI agent systems and advanced AI orchestration for task automation."}
+{"instruction": "What companies has Prawin served as Web Master?", "output": "Prawin is Web Master at AGS Scientific Company and leads web development for SSN IEEE PES chapter."}
+{"instruction": "Describe Prawin's professional identity", "output": "Prawin identifies as a full-stack developer and Gen AI enthusiast focused on building impactful tech solutions that bridge innovation with real-world applications."}
+{"instruction": "What was Prawin's role at SSN IEEE PES?", "output": "Prawin leads web development initiatives as Web Master Team lead for IEEE Power & Energy Society chapter at SSN."}
+{"instruction": "Describe EcoFinds project", "output": "EcoFinds is a sustainable marketplace Prawin developed for buying/selling second-hand goods, promoting circular economy practices."}
+{"instruction": "What technologies power Prawin's Task Management System?", "output": "The system uses multi-AI agents (CrewAI, DialogPT) with advanced AI orchestration for intelligent task automation."}
+{"instruction": "Which project demonstrates Prawin's sustainability focus?", "output": "EcoFinds marketplace reflects Prawin's commitment to sustainable solutions through technology."}
+{"instruction": "What AI frameworks did Prawin use in his task management system?", "output": "He implemented CrewAI for agent collaboration and DialogPT for conversational AI in his task management project."}
+{"instruction": "What hackathon achievement did Prawin recently earn?", "output": "Prawin placed top 7 among 200+ teams at the Odoo x Paradox Hackathon hosted at IIT Madras."}
+{"instruction": "How competitive was Prawin's hackathon placement?", "output": "His top 7 finish at Odoo x Paradox Hackathon placed him in the top 3.5% of 200+ competing teams."}
+{"instruction": "Where did Prawin apply multi-agent AI systems?", "output": "He implemented multi-AI agent architectures during his EinNel internship and in his Task Management System project."}
+{"instruction": "What real-world applications has Prawin's AI orchestration work enabled?", "output": "His AI orchestration expertise enabled intelligent task automation at EinNel and optimized workflows in his CrewAI project."}
+{"instruction": "Which projects combine Prawin's web and AI skills?", "output": "EcoFinds (full-stack marketplace) and IEEE PES web initiatives demonstrate his dual expertise in web development and AI integration."}
+{"instruction": "What does AGS Scientific Company specialize in?", "output": "AGS Scientific is a scientific equipment company where Prawin serves as Web Master, developing and managing web solutions."}
+{"instruction": "What industry exposure did EinNel provide?", "output": "At EinNel Technologies, Prawin gained professional AI engineering experience in enterprise task automation solutions."}
+{"instruction": "How does Prawin's internship relate to his projects?", "output": "His EinNel work on AI agents directly informs his CrewAI Task Management System, demonstrating applied learning."}
+{"instruction": "Which projects showcase Prawin's full-stack capabilities?", "output": "U R Hired (recruitment platform), EcoFinds (marketplace), and IEEE PES websites demonstrate full-stack development skills."}
+{"instruction": "What tech domains is Prawin most passionate about?", "output": "Prawin is passionate about Generative AI, multi-agent systems, sustainable tech solutions, and AI-powered web applications."}
+{"instruction": "How does Prawin describe his professional mission?", "output": "He aims to build impactful tech solutions that bridge innovation with real-world applications, particularly in AI and sustainability."}
+{"instruction": "What professional roles is Prawin currently maintaining?", "output": "Prawin balances his Generative AI internship at EinNel with Web Master positions at AGS Scientific and SSN IEEE PES."}
+{"instruction": "How does Prawin manage multiple development roles?", "output": "He concurrently serves as Web Master for two organizations while interning as AI Engineer and maintaining academic projects."}
+{"instruction": "What was special about Odoo x Paradox Hackathon?", "output": "This IITM-hosted event featured 200+ teams where Prawin's solution placed in the top 7 finalists."}
+{"instruction": "Which technologies were featured at Prawin's hackathon?", "output": "The Odoo x Paradox Hackathon likely involved Odoo's business apps and Paradox's AI recruiting platforms."}
+{"instruction": "What advanced AI concepts has Prawin implemented?", "output": "He has hands-on experience with multi-agent systems (CrewAI), conversational AI (DialogPT), and AI orchestration frameworks."}
+{"instruction": "Which new tools appear in Prawin's recent work?", "output": "His recent projects incorporate CrewAI for collaborative agents and DialogPT for natural language processing capabilities."}
+{"instruction": "How does EcoFinds promote sustainability?", "output": "The platform facilitates reuse of goods through a second-hand marketplace, reducing waste and encouraging circular consumption."}
+{"instruction": "What social impact themes appear in Prawin's work?", "output": "His projects address sustainability (EcoFinds), education (SEGAT), urban efficiency (Traffic AI), and employment (U R Hired)."}
+{"instruction": "What organizations benefit from Prawin's web expertise?", "output": "AGS Scientific (scientific equipment company) and SSN IEEE PES (engineering society) utilize his web development skills."}
+{"instruction": "What does a Web Master role entail for Prawin?", "output": "His responsibilities include managing web infrastructure, developing solutions, and maintaining digital presence for organizations."}
+{"instruction": "How has Prawin's AI work evolved?", "output": "He progressed from academic GenAI projects to professional multi-agent systems implementation during his EinNel internship."}
+{"instruction": "What professional AI experience does Prawin now have?", "output": "At EinNel, he gained industry experience in building production-grade AI orchestration systems for task automation."}
+{"instruction": "What proves Prawin's full-stack capabilities?", "output": "Multiple projects demonstrate this: U R Hired (React/Flask), EcoFinds (marketplace), and professional web master roles."}
+{"instruction": "Which projects use both frontend and backend technologies?", "output": "U R Hired (React+Flask), EcoFinds (full marketplace), VoyageMind (travel planner), and IEEE PES websites showcase full-stack skills."}
+{"instruction": "What recent competition highlights Prawin's abilities?", "output": "His top 7 finish at IITM's Odoo x Paradox Hackathon against 200+ teams demonstrates strong practical problem-solving skills."}
+{"instruction": "What industries has Prawin gained experience in?", "output": "He has worked in scientific equipment (AGS), AI tech (EinNel), academia (IITM/SSN), and sustainability (EcoFinds)."}
+{"instruction": "What roles might Prawin pursue after graduation?", "output": "His profile suggests opportunities in AI engineering, full-stack development, GenAI specialization, or tech leadership roles."}
+{"instruction": "How diverse are Prawin's projects?", "output": "They span education (SEGAT), recruitment (U R Hired), urban planning (Traffic AI), travel (VoyageMind), sustainability (EcoFinds), and productivity (Task AI)."}
+{"instruction": "What professional skills did EinNel internship provide?", "output": "It gave Prawin industry experience in building production-grade multi-agent AI systems and advanced orchestration solutions."}
+{"instruction": "Where has Prawin applied dialog systems?", "output": "He implemented DialogPT for conversational AI capabilities in his multi-agent Task Management System."}
+{"instruction": "What are Prawin's current professional commitments?", "output": "He maintains his Generative AI internship at EinNel while serving as Web Master for AGS Scientific and SSN IEEE PES."}
+{"instruction": "What abilities did Prawin demonstrate at Odoo x Paradox?", "output": "His top 7 finish required rapid prototyping, business logic implementation, and effective solution pitching under time constraints."}
+{"instruction": "How has Prawin's role evolved beyond academics?", "output": "He now balances professional AI engineering work (EinNel), organizational web leadership (AGS/IEEE), and competition excellence alongside academics."}
+{"instruction":"Where did Prawin complete his XII board education?","output":"Smt. Ramkuwar Devi Fomra Vivekananda Vidyalaya in Chennai, India"}
+{"instruction":"Which education board did Prawin follow in XII grade?","output":"Central Board of Secondary Education (CBSE)"}
+{"instruction":"When did Prawin attend XII grade?","output":"From June 2022 to May 2023"}
+{"instruction":"What was Prawin's XII board exam percentage?","output":"He scored 97.6% in CBSE XII board exams"}
+{"instruction":"What academic achievement did Prawin earn in XII grade?","output":"He was School Topper in XII Board Exams"}
+{"instruction":"In which subject did Prawin score a perfect 100?","output":"He scored centum (100/100) in Chemistry"}
+{"instruction":"Where is Prawin's school located?","output":"Chennai, India"}
+{"instruction":"What recognition did Prawin receive for his 97.6% score?","output":"He was named School Topper for achieving the highest score"}
+{"instruction":"Did Prawin achieve perfect scores in any XII subjects?","output":"Yes, he scored 100/100 in Chemistry"}
+{"instruction":"Combine Prawin's XII school and achievement","output":"At Smt. Ramkuwar Devi Fomra Vivekananda Vidyalaya, Prawin scored 97.6% with centum in Chemistry and emerged as School Topper"}
+
+
+
+

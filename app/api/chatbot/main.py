@@ -121,7 +121,7 @@ class ChatRequest(BaseModel):
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://prawinportfolio.vercel.app/"],
+    allow_origins=["https://prawinportfolio.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

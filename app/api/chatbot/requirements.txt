@@ -6,3 +6,4 @@ numpy
 sentence-transformers
 google-generativeai
 python-dotenv
+gunicorn

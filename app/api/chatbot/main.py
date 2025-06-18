@@ -69,14 +69,26 @@ def load_jsonl(filepath):
 @app.on_event("startup")
 async def initialize_services():
     global qa_pairs, model
-    print("Loading dataset...")
-    qa_pairs.extend(load_jsonl(Config.JSONL_PATH))
-    print(f"Loaded {len(qa_pairs)} QA pairs.")
+    try:
+        print("Loading dataset...")
+        qa_pairs.extend(load_jsonl(Config.JSONL_PATH))
+        print(f"Loaded {len(qa_pairs)} QA pairs.")
 
-    print("Configuring Gemini...")
-    genai.configure(api_key=Config.API_KEY)
-    model = genai.GenerativeModel(Config.MODEL_NAME)
-    print("Startup complete.")
+        print("Configuring Gemini...")
+        genai.configure(api_key=Config.API_KEY)
+        model = genai.GenerativeModel(Config.MODEL_NAME)
+
+        # Pre-load the index and embedder to catch any errors early
+        print("Pre-loading FAISS index and embedder...")
+        get_index()
+        get_embedder()
+
+        print("Startup complete.")
+    except Exception as e:
+        print(f"Startup failed: {e}")
+        # Don't crash the app, but log the error
+        import traceback
+        traceback.print_exc()
 
 def get_index():
     global index

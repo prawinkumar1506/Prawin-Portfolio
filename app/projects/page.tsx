@@ -570,7 +570,7 @@ const otherProjects = [
         description: "Multi-agent AI task management.",
         skills: ["Python", "CrewAI", "Gemini"],
         video: "/videos/crewai.mp4",
-        github: "https://github.com/prawinkumar1506/crew-ai-tasks",
+        github: "https://github.com/prawinkumar1506/CrewAI-Task-Management-System",
         external: "",
         gradient: "from-orange-500 to-red-600"
     },
@@ -580,15 +580,15 @@ const otherProjects = [
         skills: ["GenAI", "React.js", "API"],
         video: "/videos/voyagemind.mp4",
         github: "https://github.com/prawinkumar1506/VoyageMind",
-        external: "",
+        external: "https://voyagemindaitravelplanner-2fxwldlpzw48p2ji6fjbwd.streamlit.app/",
         gradient: "from-cyan-500 to-blue-600"
     },
     {
         title: "ChessMate Platform",
         description: "Java-based chess learning with AI bot.",
         skills: ["Java", "Chess Engine", "React"],
-        video: "/videos/chessmate.mp4",
-        github: "https://github.com/prawinkumar1506/chessmate",
+        video: "/videos/chessmate.png",
+        github: "https://github.com/prawinkumar1506/Chess-Learning-Platform-using-Java",
         external: "",
         gradient: "from-amber-500 to-orange-600"
     }

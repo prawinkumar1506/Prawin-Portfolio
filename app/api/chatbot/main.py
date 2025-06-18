@@ -118,6 +118,7 @@ class ChatRequest(BaseModel):
     message: str
 
 # === Service Initialization ===
+# === Service Initialization ===
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -126,41 +127,46 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize components
 qa_pairs = []
 index = None
-embedder = SentenceTransformer(Config.EMBEDDER_NAME)
+embedder = None  # Lazy load
 model = None
 
 @app.on_event("startup")
 async def initialize_services():
-    global qa_pairs, index, model
+    global qa_pairs, model
+    print("Loading dataset...")
+    qa_pairs.extend(load_jsonl(Config.JSONL_PATH))
+    print(f"Loaded {len(qa_pairs)} QA pairs.")
 
-    # Load dataset
-    qa_pairs = load_jsonl(Config.JSONL_PATH)
-
-    # Build FAISS index
-    questions = [pair['instruction'] for pair in qa_pairs]
-    embeddings = embedder.encode(questions)
-    dimension = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dimension)
-    index.add(np.array(embeddings).astype('float32'))
-
-    # Initialize Gemini
+    print("Configuring Gemini...")
     genai.configure(api_key=Config.API_KEY)
     model = genai.GenerativeModel(Config.MODEL_NAME)
+    print("Startup complete.")
 
-# === Core Functions ===
-def load_jsonl(filepath: str) -> List[dict]:
-    data = []
-    with open(filepath, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                data.append(json.loads(line))
-    return data
+def get_embedder():
+    global embedder
+    if embedder is None:
+        print("Loading embedder...")
+        embedder = SentenceTransformer(Config.EMBEDDER_NAME)
+    return embedder
+
+def get_index():
+    global index
+    if index is None:
+        print("Building FAISS index...")
+        embedder = get_embedder()
+        questions = [pair['instruction'] for pair in qa_pairs]
+        embeddings = embedder.encode(questions)
+        dimension = embeddings.shape[1]
+        faiss_index = faiss.IndexFlatL2(dimension)
+        faiss_index.add(np.array(embeddings).astype('float32'))
+        index = faiss_index
+    return index
 
 def semantic_search(query: str) -> List[dict]:
+    embedder = get_embedder()
+    index = get_index()
     query_vec = embedder.encode([query]).astype('float32')
     distances, indices = index.search(query_vec, Config.TOP_N)
     return [qa_pairs[idx] for idx in indices[0]]

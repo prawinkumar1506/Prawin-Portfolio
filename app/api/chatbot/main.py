@@ -15,6 +15,7 @@ load_dotenv()
 # === Configuration ===
 
 # === Configuration ===
+# === Configuration ===
 class Config:
     BASE_DIR = os.path.dirname(__file__)  # chatbot/
     APP_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "..", "app"))
@@ -22,17 +23,16 @@ class Config:
     # APP_DIR is: project/app
 
     JSONL_PATH = os.path.join(BASE_DIR, "prawin_dataset.jsonl")
-    INDEX_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "index.faiss")
 
-    EMBEDDINGS_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "embeddings.npy")
-
-
-
+    # Corrected paths to point to app/app/ directory
+    INDEX_PATH = os.path.join(BASE_DIR, "..", "..", "app", "index.faiss")
+    EMBEDDINGS_PATH = os.path.join(BASE_DIR, "..", "..", "app", "embeddings.npy")
 
     API_KEY = os.getenv("GEMINI_API_KEY")
     MODEL_NAME = "gemini-1.5-flash"
     EMBEDDER_NAME = "paraphrase-MiniLM-L3-v2"
     TOP_N = 3
+
 
 
 # === Data Models ===

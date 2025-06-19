@@ -270,7 +270,7 @@ interface Message {
     timestamp: Date;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://prawin-portfolio.onrender.com/chat';
 
 const PrawinChatbot: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);

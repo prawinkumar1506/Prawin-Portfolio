@@ -262,7 +262,7 @@ async def initialize_services():
             model = None
 
         # Pre-load embedder and index for better performance
-        get_embedder()
+        #get_embedder()
         get_index()
 
         logger.info("=== INITIALIZATION COMPLETE ===")
@@ -289,38 +289,69 @@ def get_index():
             logger.error(f"Failed to load FAISS index: {e}")
     return index
 
-def get_embedder():
-    """Lazy load embedder with error handling"""
-    global embedder
-    if embedder is None:
-        try:
-            from sentence_transformers import SentenceTransformer
-            logger.info("Loading sentence transformer...")
-            embedder = SentenceTransformer(Config.EMBEDDER_NAME)
-            logger.info("Sentence transformer loaded successfully")
-        except ImportError:
-            logger.warning("sentence-transformers not installed. Falling back to keyword search.")
-        except Exception as e:
-            logger.error(f"Failed to load embedder: {e}")
-    return embedder
+import requests  # already imported
 
-def semantic_search(query: str) -> List[dict]:
-    """Semantic search with fallback to keyword search"""
+# Remove this:
+# from sentence_transformers import SentenceTransformer
+
+# ✅ Replace get_embedder with Gemini embeddings requester
+def get_embedder(query: List[str]) -> List[List[float]]:
+    """Generate embeddings from Gemini API"""
+    if not Config.API_KEY:
+        logger.warning("No GEMINI_API_KEY configured.")
+        return []
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent?key={Config.API_KEY}"
+
+    # Gemini embeddings expects each text separately — so make individual calls or batch in one request.
     try:
-        embedder_model = get_embedder()
-        index_model = get_index()
+        payload = {
+            "model": "models/embedding-001",
+            "content": {
+                "parts": [{"text": q} for q in query]
+            }
+        }
 
-        if embedder_model is None or index_model is None:
+        headers = {
+            "Content-Type": "application/json"
+        }
+
+        response = requests.post(url, headers=headers, json=payload, timeout=30)
+
+        if response.status_code == 200:
+            embeddings = response.json().get("embedding", {}).get("values")
+            if embeddings:
+                return [embeddings]  # keep it list-of-list for FAISS
+            else:
+                logger.error(f"Embeddings missing in response: {response.json()}")
+        else:
+            logger.error(f"Embedding request failed: {response.status_code} - {response.text}")
+
+    except Exception as e:
+        logger.error(f"Error generating embeddings: {e}")
+
+    return []
+
+# ✅ Update semantic_search to use Gemini embedder instead of local model
+def semantic_search(query: str) -> List[dict]:
+    """Semantic search using Gemini embeddings"""
+    try:
+        index_model = get_index()
+        if index_model is None:
             logger.info("Falling back to keyword search...")
             return keyword_search(query)
 
-        # Ensure we have data to search
-        if not qa_pairs:
-            logger.warning("No QA pairs available for search")
-            return []
+        # Use Gemini embeddings instead of SentenceTransformer
+        query_vecs = get_embedder([query])
+        if not query_vecs:
+            logger.warning("Failed to get embeddings from Gemini. Fallback to keyword search.")
+            return keyword_search(query)
 
-        query_vec = embedder_model.encode([query]).astype('float32')
-        distances, indices = index_model.search(query_vec, min(Config.TOP_N, len(qa_pairs)))
+        query_vec = query_vecs[0]
+        import numpy as np
+        query_vec_np = np.array([query_vec], dtype='float32')
+
+        distances, indices = index_model.search(query_vec_np, min(Config.TOP_N, len(qa_pairs)))
 
         results = []
         for idx in indices[0]:
@@ -332,6 +363,7 @@ def semantic_search(query: str) -> List[dict]:
     except Exception as e:
         logger.error(f"Semantic search failed: {e}")
         return keyword_search(query)
+
 
 def keyword_search(query: str) -> List[dict]:
     """Simple keyword-based fallback search"""

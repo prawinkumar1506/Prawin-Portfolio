@@ -142,7 +142,6 @@
 # if __name__ == "__main__":
 #     import uvicorn
 #     uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -299,6 +298,10 @@ def generate_response(prompt: str) -> str:
     except Exception as e:
         print(f"Generation error: {e}")
         return "Sorry, I encountered an error generating a response."
+
+@app.get("/")
+async def root():
+    return {"message": "Prawin's AI Chatbot API", "status": "running", "endpoints": ["/chat", "/health"]}
 
 @app.get("/health")
 async def health_check():

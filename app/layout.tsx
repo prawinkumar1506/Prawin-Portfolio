@@ -3,6 +3,7 @@ import './globals.css'
 
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/contexts/ThemeContext'
+import { Toaster } from 'react-hot-toast'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,10 +19,20 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <body className={inter.className} suppressHydrationWarning>
+        <ThemeProvider>
+            {children}
+        </ThemeProvider>
 
-
-        <ThemeProvider>{children}</ThemeProvider>
+        <Toaster
+            position="top-right"
+            toastOptions={{
+                style: {
+                    background: '#333',
+                    color: '#fff',
+                },
+            }}
+        />
         </body>
         </html>
-)
+    )
 }

@@ -70,9 +70,9 @@ def load_jsonl(filepath):
 async def initialize_services():
     global qa_pairs, model
     try:
-        print("Loading dataset...")
-        qa_pairs.extend(load_jsonl(Config.JSONL_PATH))
-        print(f"Loaded {len(qa_pairs)} QA pairs.")
+        # print("Loading dataset...")
+        # qa_pairs.extend(load_jsonl(Config.JSONL_PATH))
+        # print(f"Loaded {len(qa_pairs)} QA pairs.")
 
         print("Configuring Gemini...")
         genai.configure(api_key=Config.API_KEY)

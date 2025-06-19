@@ -1,13 +1,21 @@
 'use client'
+import emailjs from '@emailjs/browser';
+
+import { useEffect, useState } from "react";
 
 
-import { useState } from "react"
+
 import { motion } from "framer-motion"
 import { Mail, LinkedinIcon, GithubIcon, InstagramIcon, TwitterIcon, Send, MapPin } from "lucide-react"
 import Navbar from "@/components/Navbar"
 import PrawinChatbot from "@/components/PrawinChatbot"
 import Footer from '@/components/Footer'
+import toast from 'react-hot-toast';
+
 const Contact = () => {
+    useEffect(() => {
+        emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
+    }, []);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -57,17 +65,45 @@ const Contact = () => {
         })
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        setIsSubmitting(true)
 
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false)
-            setFormData({ name: "", email: "", subject: "", message: "" })
-            alert("Message sent successfully!")
-        }, 2000)
-    }
+
+// Initialize once — e.g., in your component or a useEffect
+     // Replace with your actual key
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const result = await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    title: formData.subject,
+                    message: formData.message,
+                },
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            );
+
+            console.log("EmailJS SUCCESS:", result);
+            toast.success("Message sent successfully!");
+            setFormData({ name: "", email: "", subject: "", message: "" });
+
+        } catch (error) {
+            // This shows the *whole* object & its properties
+            console.error("EmailJS ERROR (raw):", error);
+            console.error("Error.text:", error?.text);
+            console.error("Error.status:", error?.status);
+            toast.error(`Failed to send. Error: ${error?.text || "Unknown"}`);
+        }
+
+        finally {
+            setIsSubmitting(false);
+        }
+    };
+
 
     return (
         <>
